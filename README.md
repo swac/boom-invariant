@@ -23,13 +23,13 @@ yarn add boom-invariant`
 
 ## Usage
 
-```
-# Throws a Boom error with a 400 `statusCode` when `someCondition` is not truthy.
+```javascript
+// Throws a Boom error with a 400 `statusCode` when `someCondition` is not truthy.
 invariant(someCondition, 'Uh oh! Condition was not met!');
 ```
 
-```
-# Throws a Boom error with a 418 `statusCode` when `someCondition` is not truthy.
+```javascript
+// Throws a Boom error with a 418 `statusCode` when `someCondition` is not truthy.
 invariant(someCondition, 'Uh oh! Condition was not met because I\'m a teapot!', 418);
 ```
 
