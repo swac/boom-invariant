@@ -10,11 +10,13 @@ objects with HTTP status codes. Usage and behavior are similar to the original, 
 ## Usage
 
 ```
-invariant(someCondition, 'Uh oh! Condition was not met!'); # Throws a Boom error with a 400 `statusCode` when `someCondition` is not truthy.
+# Throws a Boom error with a 400 `statusCode` when `someCondition` is not truthy.
+invariant(someCondition, 'Uh oh! Condition was not met!');
 ```
 
 ```
-invariant(someCondition, 'Uh oh! Condition was not met because I\'m a teapot!', 418); # Throws a Boom error with a 418 `statusCode` when `someCondition` is not truthy.
+# Throws a Boom error with a 418 `statusCode` when `someCondition` is not truthy.
+invariant(someCondition, 'Uh oh! Condition was not met because I\'m a teapot!', 418);
 ```
 
 Note that the error message argument is **required**.
@@ -22,5 +24,5 @@ Note that the error message argument is **required**.
 ## Not using Boom?
 
 If you don't use Boom and you want an invariant function, there's [a more generic version that just
-throws `Error`s](https://github.com/zertosh/invariant) and is more similar to Facebook's version.
+throws `Error` objects](https://github.com/zertosh/invariant) and is more similar to Facebook's version.
 Or just write one yourself, it's pretty simple.
