@@ -7,6 +7,20 @@ objects with HTTP status codes. Usage and behavior are similar to the original, 
 - Error messages are not formatted for you. You should use ES6 template literals to format your error message when calling the function.
 - The third argument is an optional HTTP status code. By default the status code is `400 Bad Request`.
 
+## Installation
+
+If you're using `npm`:
+
+```
+npm i --save boom-invariant
+```
+
+If you're using `yarn`:
+
+```
+yarn add boom-invariant`
+```
+
 ## Usage
 
 ```
