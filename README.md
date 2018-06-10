@@ -33,4 +33,11 @@ invariant(someCondition, 'Uh oh! Condition was not met!');
 invariant(someCondition, 'Uh oh! Condition was not met because I\'m a teapot!', 418);
 ```
 
+Or if you don't enjoy recalling HTTP status codes:
+
+```javascript
+// Throws a Boom error with a 400 `statusCode` when someCondition is not truthy.
+invariant(someCondition, 'Uh oh! I can\'t find the resource!', Boom.notFound);
+```
+
 Note that the error message argument is **required**.

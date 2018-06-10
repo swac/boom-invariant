@@ -35,4 +35,13 @@ module.exports = function () {
       invariant(true);
     }).toThrowErrorMatchingSnapshot();
   });
+
+  test('allows a boom function to be passed in', () => {
+    try {
+      invariant(false, 'This is a developer-facing error message.', Boom.notFound);
+    } catch (e) {
+      expect(e).toBeInstanceOf(Boom);
+      expect(e.output).toMatchSnapshot();
+    }
+  });
 };

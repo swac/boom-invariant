@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`allows a boom function to be passed in 1`] = `
+Object {
+  "headers": Object {},
+  "payload": Object {
+    "error": "Not Found",
+    "message": "This is a developer-facing error message.",
+    "statusCode": 404,
+  },
+  "statusCode": 404,
+}
+`;
+
 exports[`rejects the call if no error message is provided 1`] = `"You must specify an error message."`;
 
 exports[`throws a Boom 400 error when the condition is true 1`] = `
