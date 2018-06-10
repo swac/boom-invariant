@@ -34,9 +34,3 @@ invariant(someCondition, 'Uh oh! Condition was not met because I\'m a teapot!', 
 ```
 
 Note that the error message argument is **required**.
-
-## Not using Boom?
-
-If you don't use Boom and you want an invariant function, there's [a more generic version that just
-throws `Error` objects](https://github.com/zertosh/invariant) and is more similar to Facebook's version.
-Or just write one yourself, it's pretty simple.
