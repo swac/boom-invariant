@@ -1,0 +1,23 @@
+{
+  "name": "boom-invariant",
+  "version": "0.0.1",
+  "description": "An implementation of Facebook's invariant() function built on top of Boom errors",
+  "main": "index.js",
+  "repository": "https://github.com/swac/boom-invariant",
+  "author": "Ashwin Bhat <me@ashwinbhat.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "boom",
+    "invariant"
+  ],
+  "dependencies": {
+    "boom": "^7.2.0"
+  },
+  "devDependencies": {
+    "jest": "^23.1.0"
+  },
+  "scripts": {
+    "test": "NODE_ENV=development jest __tests__/dev.test.js && NODE_ENV=production jest __tests__/prod.test.js"
+  }
+}
