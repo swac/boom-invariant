@@ -26,7 +26,7 @@ export default function() {
       invariant(
         false,
         'This is a developer-facing error message about teapots.',
-        418
+        418,
       );
     } catch (e) {
       expect(e).toBeInstanceOf(Boom);
@@ -46,7 +46,7 @@ export default function() {
       invariant(
         false,
         'This is a developer-facing error message.',
-        Boom.notFound
+        Boom.notFound,
       );
     } catch (e) {
       expect(e).toBeInstanceOf(Boom);

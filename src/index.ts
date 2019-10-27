@@ -3,7 +3,7 @@ import Boom from 'boom';
 export default function(
   condition: any,
   errorMessage: string,
-  statusCodeOrBoomFunc: number | ((msg: string) => Boom) = 400
+  statusCodeOrBoomFunc: number | ((msg: string) => Boom) = 400,
 ) {
   if (!errorMessage) {
     throw new Error('You must specify an error message.');
