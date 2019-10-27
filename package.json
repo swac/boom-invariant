@@ -1,6 +1,6 @@
 {
   "name": "boom-invariant",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An implementation of Facebook's invariant() function built on top of Boom errors",
   "repository": "https://github.com/swac/boom-invariant",
   "author": "Ashwin Bhat <me@ashwinbhat.com>",
