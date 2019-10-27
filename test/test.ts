@@ -1,8 +1,8 @@
-const Boom = require('boom');
+import Boom from 'boom';
 
-const invariant = require('../index');
+import invariant from '../src';
 
-module.exports = function () {
+export default function() {
   test('does not throw when the condition is true', () => {
     expect(() => {
       invariant(true, 'This is a developer-facing error message.');
@@ -23,7 +23,11 @@ module.exports = function () {
 
   test('throws a Boom error with a custom status code when specified', () => {
     try {
-      invariant(false, 'This is a developer-facing error message about teapots.', 418);
+      invariant(
+        false,
+        'This is a developer-facing error message about teapots.',
+        418
+      );
     } catch (e) {
       expect(e).toBeInstanceOf(Boom);
       expect(e.output).toMatchSnapshot();
@@ -32,16 +36,21 @@ module.exports = function () {
 
   test('rejects the call if no error message is provided', () => {
     expect(() => {
+      // @ts-ignore
       invariant(true);
     }).toThrowErrorMatchingSnapshot();
   });
 
   test('allows a boom function to be passed in', () => {
     try {
-      invariant(false, 'This is a developer-facing error message.', Boom.notFound);
+      invariant(
+        false,
+        'This is a developer-facing error message.',
+        Boom.notFound
+      );
     } catch (e) {
       expect(e).toBeInstanceOf(Boom);
       expect(e.output).toMatchSnapshot();
     }
   });
-};
+}

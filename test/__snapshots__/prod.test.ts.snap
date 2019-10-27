@@ -5,7 +5,7 @@ Object {
   "headers": Object {},
   "payload": Object {
     "error": "Not Found",
-    "message": "Not Found",
+    "message": "This is a developer-facing error message.",
     "statusCode": 404,
   },
   "statusCode": 404,
@@ -19,7 +19,7 @@ Object {
   "headers": Object {},
   "payload": Object {
     "error": "Bad Request",
-    "message": "Bad Request",
+    "message": "This is a developer-facing error message.",
     "statusCode": 400,
   },
   "statusCode": 400,
@@ -31,7 +31,7 @@ Object {
   "headers": Object {},
   "payload": Object {
     "error": "I'm a teapot",
-    "message": "I'm a teapot",
+    "message": "This is a developer-facing error message about teapots.",
     "statusCode": 418,
   },
   "statusCode": 418,
