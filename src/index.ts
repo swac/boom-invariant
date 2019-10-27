@@ -1,9 +1,11 @@
-import Boom from 'boom';
+import Boom from '@hapi/boom';
+
+type BoomFunction = <Data>(message?: string, data?: Data) => Boom.Boom<Data>;
 
 export default function(
   condition: any,
   errorMessage: string,
-  statusCodeOrBoomFunc: number | ((msg: string) => Boom) = 400,
+  statusCodeOrBoomFunc: number | BoomFunction = 400,
 ) {
   if (!errorMessage) {
     throw new Error('You must specify an error message.');
