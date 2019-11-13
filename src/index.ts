@@ -6,7 +6,7 @@ export default function(
   condition: any,
   errorMessage: string,
   statusCodeOrBoomFunc: number | BoomFunction = 400,
-) {
+): asserts condition {
   if (!errorMessage) {
     throw new Error('You must specify an error message.');
   }
