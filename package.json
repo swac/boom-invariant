@@ -38,5 +38,8 @@
   },
   "peerDependencies": {
     "@hapi/boom": "^8.0.1"
+  },
+  "resolutions": {
+    "tsdx/typescript": "^3.7.2"
   }
 }
