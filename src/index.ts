@@ -2,7 +2,7 @@ import Boom from '@hapi/boom';
 
 type BoomFunction = <Data>(message?: string, data?: Data) => Boom.Boom<Data>;
 
-export default function(
+function invariant(
   condition: any,
   errorMessage: string,
   statusCodeOrBoomFunc: number | BoomFunction = 400,
@@ -34,3 +34,6 @@ export default function(
 
   throw Boom.boomify(error, { statusCode: statusCodeOrBoomFunc });
 }
+
+module.exports = invariant;
+export default invariant;
